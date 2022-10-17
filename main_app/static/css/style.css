@@ -9,16 +9,7 @@ main {
 }
 
 nav {
-    background-color: whitesmoke !important;
-    color: black !important;
-}
-
-nav .brand-logo {
-    color: black !important;
-}
-
-nav ul a {
-    color: black !important
+    background-color: black !important;
 }
 
 .page-footer {
