@@ -6,4 +6,14 @@ Welcome Summoner! | Summoner's Academy
 
 {% block content %}
 <h1>Welcome to Summoner's Academy</h1>
+<h3>Choose your Champion</h3>
+
+{% for champ in champions.values %}
+
+<p>{{ champ.name }}</p>
+<p>{{ champ.title }}</p>
+<p>{{ champ.blurb }}</p>
+
+{% endfor %}
+
 {% endblock%}
