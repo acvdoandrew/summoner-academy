@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from riotwatcher import LolWatcher, ApiError
 
 # Create your views here.
 def home(request):
