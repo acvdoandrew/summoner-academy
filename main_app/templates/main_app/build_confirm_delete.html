@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Are you sure? | Summoner's Academy
+{% endblock %}
+
+{% block content %}
+<h1>Are you sure you want to delete the <span class="red-text">{{ object.build_name }}</span> build?</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Yes - Destroy it" class="btn red">
+    <a href="{% url 'detail' object.champion %}">No - Cancel</a>
+</form>
+{% endblock %}

@@ -53,3 +53,11 @@ class BuildCreate(CreateView):
         form.instance.user = self.request.user
         form.instance.champion = self.kwargs['name']
         return super().form_valid(form)
+
+class BuildUpdate(UpdateView):
+    model = Build 
+    fields = ('build_name', 'mythic', 'boots', 'legendary_1', 'legendary_2', 'legendary_3', 'legendary_4')
+
+class BuildDelete(DeleteView):
+    model = Build
+    success_url = '/'
