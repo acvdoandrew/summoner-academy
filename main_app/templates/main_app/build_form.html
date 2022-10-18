@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add a build | Summoner's Academy
+{% endblock %}
+
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Add" class="btn">
+</form>
+{% endblock %}

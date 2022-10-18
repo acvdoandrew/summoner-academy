@@ -3,6 +3,7 @@ from riotwatcher import LolWatcher
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from .models import Build
+from django.views.generic import CreateView, UpdateView, DeleteView
 
  
 lol_watcher = LolWatcher('RGAPI-a5e4a44e-5b80-40b4-815b-353384cd7e41')
@@ -28,7 +29,6 @@ def about(request):
 def detail(request, name):
     champ = champions.get(name)
     builds = Build.objects.filter(champion=name)
-    print(builds)
     return render(request, 'detail.html', {'champ': champ, 'builds': builds})
 
 def signup(request):
@@ -44,3 +44,12 @@ def signup(request):
     form = UserCreationForm()
     context = {'form': form, 'error': error_message}
     return render(request, 'registration/signup.html', context)
+
+class BuildCreate(CreateView):
+    model = Build
+    fields = ('build_name', 'mythic', 'boots', 'legendary_1', 'legendary_2', 'legendary_3', 'legendary_4')
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        form.instance.champion = self.kwargs['name']
+        return super().form_valid(form)
