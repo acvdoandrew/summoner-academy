@@ -11,7 +11,7 @@ Welcome Summoner! | Summoner's Academy
 {% for champ in champions.values %}
 
 <div class="card">
-    <a href="{% url 'detail' champ.name %}">
+    <a href="{% url 'detail' champ.id %}">
         <div class="card-content">
             <p>{{ champ.name }}</p>
         </div>
