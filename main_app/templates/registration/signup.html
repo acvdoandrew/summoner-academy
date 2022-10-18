@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Create an Account! | Summoner's Academy
+{% endblock %}
+
+{% block content %}
+
+<h1>Sign Up</h1>
+
+{% if error %}
+<p class="red-text">{{ error }}</p>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Signup" class="btn grey">
+</form>
+{% endblock %}
