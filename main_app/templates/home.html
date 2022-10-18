@@ -6,21 +6,23 @@ Welcome Summoner! | Summoner's Academy
 {% endblock%}
 
 {% block content %}
-<h1>Welcome to Summoner's Academy</h1>
-<h3>Choose your Champion</h3>
-
-{% for champ in champions.values %}
-
-<div class="champion-card">
-    <a href="{% url 'detail' champ.id %}">
-        <div class="content-wrapper">
-            <img src="{% static 'imgs/loading/' %}{{ champ.id }}_0.jpg" alt="{{ champ.name }}">
-            <p>{{ champ.name }}</p>
-        </div>
-    </a>
+<div class="title">
+    <span class="subtitle">Choose your</span>
+    <h1><span class="hero">Champion</span></h1>
+    <p class="plain-text">With more than 140 champions, you'll find the perfect match for your playstyle. Master one, or master them all</p>
 </div>
 
-
-{% endfor %}
+<div class="card-wrapper">
+    {% for champ in champions.values %}
+    <div class="cardz">
+        <a href="{% url 'detail' champ.id %}">
+            <div class="home-card-content">
+                <img src="{% static 'imgs/loading/' %}{{ champ.id }}_0.jpg" alt="{{ champ.name }}">
+                <p>{{ champ.name }}</p>
+            </div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
 
 {% endblock%}
