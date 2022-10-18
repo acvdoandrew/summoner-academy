@@ -10,11 +10,7 @@
 <div class="card">
     <div class="card-content">
         <div class="img-wrapper">
-            {% if champ.name == 'Wukong' %}
-            <img class="responsive-img" src="{% static 'imgs/splash/' %}MonkeyKing_0.jpg" alt="{{ champ.name }}">
-            {% else %}
-            <img class="responsive-img" src="{% static 'imgs/splash/' %}{{ champ.name }}_0.jpg" alt="{{ champ.name }}">
-            {% endif %}
+            <img class="responsive-img" src="{% static 'imgs/splash/' %}{{ champ.id }}_0.jpg" alt="{{ champ.name }}">
             <p class="center-align">{{ champ.title }}</p>
             <p class="center-align"><span class="card-title">{{ champ.name }}</span></p>
         </div>
