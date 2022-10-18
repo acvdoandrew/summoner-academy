@@ -10,9 +10,14 @@ Welcome Summoner! | Summoner's Academy
 
 {% for champ in champions.values %}
 
-<p>{{ champ.name }}</p>
-<p>{{ champ.title }}</p>
-<p>{{ champ.blurb }}</p>
+<div class="card">
+    <a href="{% url 'detail' champ.name %}">
+        <div class="card-content">
+            <p>{{ champ.name }}</p>
+        </div>
+    </a>
+</div>
+
 
 {% endfor %}
 

@@ -18,3 +18,8 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def detail(request, name):
+    champ = champions.get(name)
+    print(champ)
+    return render(request, 'detail.html', {'champ': champ})
