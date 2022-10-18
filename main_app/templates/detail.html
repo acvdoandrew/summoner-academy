@@ -16,4 +16,17 @@
         </div>
     </div>
 </div>
+{% if builds %}
+{% for build in builds %}
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">{{ build.build_name }}</span>
+        <p>{{ build.mythic }}, {{ build.boots }}, {{ build.legendary_1 }}, {{ build.legendary_2 }}, {{ build.legendary_3 }}, {{ build.legendary_4 }}</p>
+        <h6>Built by: {{ build.user }}</h6>
+    </div>
+</div>
+{% endfor %}
+{% else %}
+<p class="red-text">No builds :(</p>
+{% endif %}
 {% endblock %}
