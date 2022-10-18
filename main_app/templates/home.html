@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Welcome Summoner! | Summoner's Academy
@@ -10,9 +11,10 @@ Welcome Summoner! | Summoner's Academy
 
 {% for champ in champions.values %}
 
-<div class="card">
+<div class="champion-card">
     <a href="{% url 'detail' champ.id %}">
-        <div class="card-content">
+        <div class="content-wrapper">
+            <img src="{% static 'imgs/loading/' %}{{ champ.id }}_0.jpg" alt="{{ champ.name }}">
             <p>{{ champ.name }}</p>
         </div>
     </a>
