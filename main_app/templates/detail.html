@@ -1,9 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title%}
 {{ champ.name }}'s Details | Summoner's Academy
 {% endblock %}
 
 {% block content %}
-<h1>{{ champ.name }}</h1>
+
+<div class="card">
+    <div class="card-content">
+        <div class="img-wrapper">
+            <img class="responsive-img" src="{% static 'imgs/centered/' %}{{ champ.name }}_0.jpg" alt="{{ champ.name }}">
+            <p class="center-align">{{ champ.title }}</p>
+            <p class="center-align"><span class="card-title">{{ champ.name }}</span></p>
+        </div>
+    </div>
+</div>
 {% endblock %}
