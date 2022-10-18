@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Log In | Summoner's Academy
+{% endblock %}
+
+{% block content %}
+<h1>Log In</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Login" class="btn grey">
+</form>
+
+{% endblock %}
