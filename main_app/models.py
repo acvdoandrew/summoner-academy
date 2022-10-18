@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Build(models.Model):
+    champion = models.CharField(max_length=100)
     build_name = models.CharField(max_length=100)
     mythic = models.CharField(max_length=100)
     boots = models.CharField(max_length=100)
