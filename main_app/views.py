@@ -13,6 +13,8 @@ champions_version = versions['n']['champion']
 # Let's get some champions now
 champion_list = lol_watcher.data_dragon.champions(champions_version)
 champions = champion_list.get('data')
+item_list = lol_watcher.data_dragon.items(champions_version)
+items = item_list.get('data')
 
 
 # Create your views here.
