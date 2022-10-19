@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'beaufort-bold';
+    src: local('BeaufortforLOL-Bold'), url('/main_app/static/css/fonts/Beaufort-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'spiegel-regular';
+    src: local('Spiegel-Regular'), url('/main_app/static/css/fonts/Spiegel-Regular.ttf');
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    background-color: black !important;
+    font-family: 'spiegel-regular';
+}
+
+.page-footer {
+    background-color: whitesmoke !important;
+    color: black !important;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'beaufort-bold', serif;
+    font-weight: bolder;
+    font-style: italic;
+    margin-top: 2rem;
+    line-height: 0;
+}
+
+.title .hero {
+    font-size: 120px;
+    font-weight: 800;
+}
+
+.title .subtitle {
+    font-size: 30px;
+}
+
+.title .plain-text {
+    font-family: 'spiegel-regular';
+    text-transform: none;
+    font-style: normal;
+    font-weight: lighter;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    gap: 2rem;
+    text-transform: uppercase;
+    justify-content: space-around;
+    font-family: 'beaufort-bold', serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.home-card-content img {
+    display: block;
+    box-sizing: border-box;
+    border-style: none;
+    object-fit: cover;
+    max-width: 30rem;
+    max-height: 25rem;
+}
+
+.card-content {
+    font-family: 'beaufort-bold', serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.card-content .lore {
+    font-family: 'spiegel-regular';
+    text-transform: none;
+    font-style: normal;
+}
+
+.card-content .card-title {
+    font-weight: bolder;
+    font-size: 60px;
+}
