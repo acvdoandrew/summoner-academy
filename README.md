@@ -22,7 +22,7 @@ Experienced players can create an account and start adding builds to a champion'
 
 ## Getting Started
 
-Coming Soon
+[Click Here!](https://summoner-academy.herokuapp.com/) to see the deployed app.
 
 ## Future Enhancements
 
