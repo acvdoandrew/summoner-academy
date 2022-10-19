@@ -27,6 +27,9 @@
             </li>
           </ul>
           <ul class="right">
+            {% if user.is_authenticated %}
+            <li><p>Welcome, {{ user }}</p></li>
+            {% endif %}
             <li><a href="{% url 'about' %}">About</a></li>
             {% if user.is_authenticated %}
             <li><a href="{% url 'logout' %}">Log Out</a></li>
