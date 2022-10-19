@@ -1,0 +1,68 @@
+[
+{
+  "model": "main_app.build",
+  "pk": 1,
+  "fields": {
+    "champion": "Akali",
+    "build_name": "Assassin Burst",
+    "mythic": "Hextech Rocketbelt",
+    "boots": "Sorcerer's Shoes",
+    "legendary_1": "Shadowflame",
+    "legendary_2": "Rabadon's Deathcap",
+    "legendary_3": "Zhonya's Hourglass",
+    "legendary_4": "Void Staff",
+    "user": "lithe"
+  }
+},
+{
+  "model": "main_app.build",
+  "pk": 3,
+  "fields": {
+    "champion": "Aatrox",
+    "build_name": "Tanky",
+    "mythic": "test",
+    "boots": "Sorcerer's test",
+    "legendary_1": "Shadowtest",
+    "legendary_2": "Rabadon's test",
+    "legendary_3": "Zhonya's test",
+    "legendary_4": "Void Stafftest",
+    "user": "lithe"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$qxhAWqLKgEl6f52W0ekUks$3BTBCJnVpOD4ux9/DScZMoaBtvSz7bALh97H9UNVPT0=",
+    "last_login": "2022-10-19T20:01:17.104Z",
+    "is_superuser": true,
+    "username": "lithe",
+    "first_name": "",
+    "last_name": "",
+    "email": "lithe@gg.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-10-18T00:41:14.615Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$390000$5iibGFhmRCHmvwTWa1h6Eo$y8K7FnAYf0t7RBP+TatmbL9BmEltVf9HySI5r5d37sU=",
+    "last_login": "2022-10-19T12:40:17.355Z",
+    "is_superuser": false,
+    "username": "sukuna",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-10-18T04:18:09.641Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
