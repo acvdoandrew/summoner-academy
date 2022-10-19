@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Add a build | Summoner's Academy
+{% endblock %}
+
+{% block content %}
+
+{% if object %}
+<h1>Edit Build</h1>
+{% else %}
+<h1>Add a Build</h1>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="{% if object %} Update {% else %} Add New Build {% endif %}" class="btn">
+</form>
+{% endblock %}
