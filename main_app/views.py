@@ -4,6 +4,8 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from .models import Build
 from django.views.generic import CreateView, UpdateView, DeleteView
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 
  
 lol_watcher = LolWatcher('RGAPI-a5e4a44e-5b80-40b4-815b-353384cd7e41')
@@ -26,6 +28,7 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+@login_required
 def detail(request, name):
     champ = champions.get(name)
     builds = Build.objects.filter(champion=name)
@@ -45,7 +48,7 @@ def signup(request):
     context = {'form': form, 'error': error_message}
     return render(request, 'registration/signup.html', context)
 
-class BuildCreate(CreateView):
+class BuildCreate(LoginRequiredMixin, CreateView):
     model = Build
     fields = ('build_name', 'mythic', 'boots', 'legendary_1', 'legendary_2', 'legendary_3', 'legendary_4')
 
@@ -54,10 +57,10 @@ class BuildCreate(CreateView):
         form.instance.champion = self.kwargs['name']
         return super().form_valid(form)
 
-class BuildUpdate(UpdateView):
+class BuildUpdate(LoginRequiredMixin, UpdateView):
     model = Build 
     fields = ('build_name', 'mythic', 'boots', 'legendary_1', 'legendary_2', 'legendary_3', 'legendary_4')
 
-class BuildDelete(DeleteView):
+class BuildDelete(LoginRequiredMixin, DeleteView):
     model = Build
     success_url = '/'
