@@ -28,10 +28,12 @@
         <p>{{ build.mythic }}, {{ build.boots }}, {{ build.legendary_1 }}, {{ build.legendary_2 }}, {{ build.legendary_3 }}, {{ build.legendary_4 }}</p>
         <h6>Built by: {{ build.user }}</h6>
     </div>
+    {% if user == build.user %}
     <div class="card-action">
         <a href="{% url 'build_update' champ.id build.id %}">Update</a>
         <a href="{% url 'build_delete' champ.id build.id %}">Delete</a>
     </div>
+    {% endif %}
 </div>
 {% endfor %}
 {% else %}
