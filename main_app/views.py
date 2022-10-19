@@ -6,9 +6,12 @@ from .models import Build
 from django.views.generic import CreateView, UpdateView, DeleteView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+import environ 
+env = environ.Env()
+environ.Env.read_env()
 
  
-lol_watcher = LolWatcher('RGAPI-a5e4a44e-5b80-40b4-815b-353384cd7e41')
+lol_watcher = LolWatcher(env('RIOT_API_KEY'))
 my_region = 'na1'
 
 # Getting the latest version of the game from Data Dragon
