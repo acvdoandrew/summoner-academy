@@ -17,7 +17,7 @@ Welcome Summoner! | Summoner's Academy
     <div class="cardz">
         <a href="{% url 'detail' champ.id %}">
             <div class="home-card-content">
-                <img src="{% static 'imgs/loading/' %}{{ champ.id }}_0.jpg" alt="{{ champ.name }}">
+                <img src="{% if champ.id == 'Fiddlesticks' %}{% static 'imgs/loading/' %}FiddleSticks_0.jpg{% else %}{% static 'imgs/loading/' %}{{ champ.id }}_0.jpg {% endif %}" alt="{{ champ.name }}">
                 <p>{{ champ.name }}</p>
             </div>
         </a>
