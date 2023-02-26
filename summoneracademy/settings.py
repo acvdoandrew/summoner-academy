@@ -35,6 +35,10 @@ ALLOWED_HOSTS = ['*']
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://summoners-academy.up.railway.app'
+]
+
 # Application definition
 
 INSTALLED_APPS = [
