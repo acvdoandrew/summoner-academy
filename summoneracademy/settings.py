@@ -125,10 +125,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-# CSRF Token Trusted Origins
-CSRF_TRUSTED_ORIGINS = [
-    'https://summoners-academy.up.railway.app'
-]
 
 
 # Static files (CSS, JavaScript, Images)
