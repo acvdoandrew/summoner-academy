@@ -36,7 +36,7 @@ ALLOWED_HOSTS = ['*']
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://summoners-academy.up.railway.app'
+    'https://summonersacademy.up.railway.app'
 ]
 
 # Application definition
